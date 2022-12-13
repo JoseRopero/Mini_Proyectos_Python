@@ -41,6 +41,15 @@ def comprobar_estado(eleccion_cliente, deposito_maq, menu_maq):
         else:
             return True
 
+# Otra forma de hacerlo.
+# def comprobar(eleccion_cliente):
+#     """Returns True when order can be made, False if ingredients are insufficient."""
+#     for item in eleccion_cliente:
+#         if eleccion_cliente[item] <= resources[item]:
+#             return True
+#     else:
+#         print(f"Lo siento, no hay suficiente {item}.")
+
 
 def insertar_dinero():
     print("Escriba el número de monedas que va ha insertar.")
