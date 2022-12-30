@@ -17,11 +17,18 @@ class Snake:
 
     def crear_snake(self):
         for posicion in POSICION_START:  # Creamos 3 cuadrados que forman la serpiente
-            snake = Turtle(shape="square")
-            snake.color("white")
-            snake.penup()
-            snake.goto(posicion)
-            self.snakes.append(snake)
+            self.add_snake(posicion)
+
+    def add_snake(self, posicion):
+        snake = Turtle(shape="square")
+        snake.color("white")
+        snake.penup()
+        snake.goto(posicion)
+        self.snakes.append(snake)
+
+    def extender(self):
+        # Añadir un nuevo segmento cada vez que coma.
+        self.add_snake(self.snakes[-1].position())
 
     def move(self):
         # Creamos un bucle para que el último cuadrado pase a la posición del segundo y el segundo a la del primero
