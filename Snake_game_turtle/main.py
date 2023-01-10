@@ -31,18 +31,18 @@ while game_is_one:
     if snake.head.distance(food) < 15:  # Si la distancia entre los dos objetos es menor de 15, ejecuta el código.
         food.refrescar()
         snake.extender()
-        scoreboard.score()
+        scoreboard.incrementar_score()
 
     # Detectar colisión con las paredes.
     if snake.head.xcor() > 285 or snake.head.xcor() < -285 or snake.head.ycor() > 285 or snake.head.ycor() < -285:
-        game_is_one = False
-        scoreboard.game_over()
+        scoreboard.reset()
+        snake.reset()
 
     # Detectar colisión con la cola.
     for segmento in snake.snakes[1:]:  # Excluimos la cabeza del bucle para no comparar cabeza con cabeza.
         if snake.head.distance(segmento) < 10:  # Comparamos la cabeza con cualquier trozo de la serpiente.
-            game_is_one = False
-            scoreboard.game_over()
+            scoreboard.reset()
+            snake.reset()
 
 
 s.exitonclick()

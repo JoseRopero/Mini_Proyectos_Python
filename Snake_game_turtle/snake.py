@@ -26,6 +26,13 @@ class Snake:
         snake.goto(posicion)
         self.snakes.append(snake)
 
+    def reset(self):  # Cada vez que choque reiniciamos la serpiente para el siguiente juego.
+        for snake in self.snakes:
+            snake.goto(1000, 1000)
+        self.snakes.clear()
+        self.crear_snake()  # Volvemos a crear una serpiente nueva.
+        self.head = self.snakes[0]  # Volvemos a indicar que el elemento 0 es la cabeza
+
     def extender(self):
         # Añadir un nuevo segmento cada vez que coma.
         self.add_snake(self.snakes[-1].position())
