@@ -4,7 +4,7 @@ Este repositorio contiene una colección de mini proyectos y ejercicios en Pytho
 
 ## Proyectos
 
-1. [♠️ BlackJack](./BlackJack)  
+1. [♠️ BlackJack](Blackjack)
    Implementación del clásico juego de BlackJack en Python. Compite contra la computadora para acercarte a 21 sin pasarte. El README del proyecto proporciona una descripción completa del juego, sus reglas y cómo ejecutarlo.
 
 ---
